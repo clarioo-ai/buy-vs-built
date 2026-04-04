@@ -715,7 +715,7 @@
   .slack-hash { color: #B5BAC1; font-size: 18px; font-weight: 400; }
   .slack-channel-name { font-size: 15px; font-weight: 700; color: #D1D2D3; }
   .slack-channel-desc { font-size: 11px; color: #B5BAC1; margin-left: auto; }
-  .slack-messages { padding: 16px 18px; display: flex; flex-direction: column; gap: 16px; max-height: 820px; overflow-y: auto; background: #1A1D21; }
+  .slack-messages { padding: 16px 18px; display: flex; flex-direction: column; gap: 16px; max-height: 560px; overflow-y: auto; background: #1A1D21; }
   .slack-msg { display: flex; gap: 10px; }
   .slack-avatar { width: 36px; height: 36px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: #fff; }
   .slack-msg-body { flex: 1; min-width: 0; }
@@ -762,28 +762,6 @@
   .dp-live-task.task-active { color: var(--text); font-weight: 500; }
   .dp-live-timeline { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(148,163,184,0.06); }
   .dp-live-timeline-dot { width: 6px; height: 6px; border-radius: 50%; }
-
-  /* RHS Toggle */
-  .rhs-toggle { display: flex; background: rgba(255,255,255,0.04); border-radius: 10px; padding: 3px; margin-bottom: 16px; }
-  .rhs-toggle-btn { flex: 1; padding: 8px 12px; font-size: 12px; font-weight: 700; color: var(--text-muted); background: transparent; border: none; border-radius: 8px; cursor: pointer; transition: all 0.25s; letter-spacing: 0.5px; }
-  .rhs-toggle-btn.active { color: #fff; background: linear-gradient(135deg, var(--accent), #0284C7); box-shadow: 0 2px 12px var(--accent-glow); }
-  .rhs-toggle-btn:hover:not(.active) { color: var(--text); }
-  .rhs-panel { display: none; }
-  .rhs-panel.active { display: block; }
-
-  /* Artifact Files */
-  .artifact-file { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; transition: all 0.25s; cursor: default; }
-  .artifact-file:hover { border-color: rgba(14,165,233,0.3); box-shadow: 0 2px 16px rgba(0,0,0,0.12); }
-  .artifact-file-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-  .artifact-file-icon { width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
-  .artifact-file-name { font-size: 13px; font-weight: 700; color: var(--text); }
-  .artifact-file-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-  .artifact-file-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
-  .artifact-file-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-  .artifact-file-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: rgba(148,163,184,0.08); color: var(--text-muted); }
-  .artifact-file-tag.tag-buy { background: rgba(16,185,129,0.1); color: #10B981; }
-  .artifact-file-tag.tag-build { background: rgba(245,158,11,0.1); color: #F59E0B; }
-  .artifact-file-tag.tag-both { background: rgba(139,92,246,0.1); color: #8B5CF6; }
 
   /* ====== VALUE SECTION ====== */
   .value-container { max-width: 1100px; margin: 0 auto; }
@@ -1946,120 +1924,27 @@
 
             <div class="slack-divider">
               <div class="slack-divider-line"></div>
-              <div class="slack-divider-text">Tuesday — Buying Analysis Agent begins work</div>
+              <div class="slack-divider-text">Wednesday — Both tracks launched</div>
               <div class="slack-divider-line"></div>
             </div>
 
-            <!-- Buying Analysis Agent shares draft matrix -->
+            <!-- Clarioo Buy Track update -->
             <div class="slack-msg">
-              <div class="slack-avatar" style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 8px; font-size:9px; line-height:1.1; text-align:center; display:flex; align-items:center; justify-content:center;">&#129302;</div>
+              <div class="slack-avatar" style="background: linear-gradient(135deg, #0EA5E9, #06B6D4); border-radius: 8px;">C</div>
               <div class="slack-msg-body">
                 <div class="slack-msg-header">
-                  <span class="slack-msg-name">Buying Analysis Agent</span>
-                  <span class="slack-msg-badge" style="background:rgba(16,185,129,0.15); color:#10B981;">AI AGENT</span>
-                  <span class="slack-msg-time">Tue 8:30 AM</span>
-                </div>
-                <div class="slack-msg-text">
-                  I've completed a draft Vendor Evaluation Matrix based on public sources (G2, Gartner, vendor docs, pricing pages). 12 vendors scored across 8 weighted criteria. <strong>@Sarah Chen</strong> — could you review the weighting before I finalize?
-                </div>
-                <div class="slack-artifact" style="border-left-color: #10B981;">
-                  <div class="slack-artifact-title" style="color: #10B981;">&#128196; ARTIFACT: Vendor Evaluation Matrix v0.1 (Draft)</div>
-                  <div class="slack-artifact-desc">12 vendors &middot; 8 criteria (API quality, warehouse sync, scalability, TCO, implementation time, support, compliance, integration depth) &middot; Weighted scoring &middot; Data sources: G2 reviews, Gartner MQ, vendor documentation</div>
-                </div>
-                <span class="slack-reaction">&#128064; <span class="slack-reaction-count">5</span></span>
-              </div>
-            </div>
-
-            <!-- VP Product reviews and responds -->
-            <div class="slack-msg">
-              <div class="slack-avatar" style="background: #8B5CF6; border-radius: 8px;">SC</div>
-              <div class="slack-msg-body">
-                <div class="slack-msg-header">
-                  <span class="slack-msg-name">Sarah Chen</span>
-                  <span class="slack-msg-badge" style="background:rgba(139,92,246,0.15); color:#8B5CF6;">VP Product</span>
-                  <span class="slack-msg-time">Tue 10:15 AM</span>
-                </div>
-                <div class="slack-msg-text">Reviewed. Two changes: bump "warehouse sync" weighting from 15% to 25% — that's our #1 pain point. And add "multi-currency support" as a criterion, we're expanding to EU in Q3. Otherwise looks solid.</div>
-                <span class="slack-reaction">&#128077; <span class="slack-reaction-count">3</span></span>
-              </div>
-            </div>
-
-            <!-- Buying Analysis Agent incorporates feedback -->
-            <div class="slack-msg">
-              <div class="slack-avatar" style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 8px; font-size:9px; line-height:1.1; text-align:center; display:flex; align-items:center; justify-content:center;">&#129302;</div>
-              <div class="slack-msg-body">
-                <div class="slack-msg-header">
-                  <span class="slack-msg-name">Buying Analysis Agent</span>
-                  <span class="slack-msg-badge" style="background:rgba(16,185,129,0.15); color:#10B981;">AI AGENT</span>
-                  <span class="slack-msg-time">Tue 11:02 AM</span>
-                </div>
-                <div class="slack-msg-text">
-                  Updated. Warehouse sync now weighted at 25%, multi-currency added as 9th criterion. This changes the rankings — Brightpearl drops to #5 (no native multi-currency). Revised shortlist: <strong>Manhattan Active, Linnworks, Shipedge</strong>.
-                </div>
-                <div class="slack-artifact" style="border-left-color: #10B981;">
-                  <div class="slack-artifact-title" style="color: #10B981;">&#128196; ARTIFACT: Vendor Evaluation Matrix v1.0 (Final)</div>
-                  <div class="slack-artifact-desc">12 vendors &middot; 9 weighted criteria &middot; 3 shortlisted &middot; Incorporates VP Product feedback &middot; Submitted to decision record</div>
-                </div>
-                <span class="slack-reaction">&#9989; <span class="slack-reaction-count">4</span></span>
-                <span class="slack-reaction">&#128640; <span class="slack-reaction-count">2</span></span>
-              </div>
-            </div>
-
-            <div class="slack-divider">
-              <div class="slack-divider-line"></div>
-              <div class="slack-divider-text">Wednesday — Both tracks in full motion</div>
-              <div class="slack-divider-line"></div>
-            </div>
-
-            <!-- Buying Analysis Agent schedules vendor calls -->
-            <div class="slack-msg">
-              <div class="slack-avatar" style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 8px; font-size:9px; line-height:1.1; text-align:center; display:flex; align-items:center; justify-content:center;">&#129302;</div>
-              <div class="slack-msg-body">
-                <div class="slack-msg-header">
-                  <span class="slack-msg-name">Buying Analysis Agent</span>
-                  <span class="slack-msg-badge" style="background:rgba(16,185,129,0.15); color:#10B981;">AI AGENT</span>
+                  <span class="slack-msg-name">Clarioo</span>
+                  <span class="slack-msg-badge" style="background:rgba(46,182,125,0.15); color:#2EB67D;">APP</span>
                   <span class="slack-msg-time">Wed 9:00 AM</span>
                 </div>
                 <div class="slack-msg-text">
-                  Moving to In-depth Evaluation. I've prepared vendor-specific question packs for the 3 shortlisted vendors and drafted a demo scoring rubric. <strong>@Sarah Chen</strong> <strong>@Rachel Kim</strong> — I've proposed call slots for next week. Can you confirm availability?
+                  <strong>&#128269; Buy Track update</strong> — Buying Analysis Agent completed the Vendor Evaluation Matrix from public sources.
                 </div>
                 <div class="slack-artifact" style="border-left-color: #10B981;">
-                  <div class="slack-artifact-title" style="color: #10B981;">&#128196; ARTIFACT: Vendor Demo Scoring Rubric</div>
-                  <div class="slack-artifact-desc">Standardised rubric for evaluating vendor demos &middot; 15 scored items across UX, integration, performance, support &middot; Aligned to evaluation criteria</div>
+                  <div class="slack-artifact-title" style="color: #10B981;">Vendor Evaluation Matrix — 12 vendors scored, 3 shortlisted</div>
+                  <div class="slack-artifact-desc">Manhattan Active, Brightpearl, Linnworks shortlisted based on G2 reviews, Gartner data, vendor docs. Scoring across 8 weighted criteria. Customer-vendor calls scheduled for In-depth Evaluation next week.</div>
                 </div>
-                <div class="slack-artifact" style="border-left-color: #0EA5E9;">
-                  <div class="slack-artifact-title" style="color: #0EA5E9;">&#128196; ARTIFACT: Vendor Question Packs (3)</div>
-                  <div class="slack-artifact-desc">Tailored questions per vendor &middot; Manhattan: ERP connector depth &middot; Linnworks: multi-currency handling &middot; Shipedge: warehouse sync architecture</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Rachel Kim confirms and adds context -->
-            <div class="slack-msg">
-              <div class="slack-avatar" style="background: #E01E5A; border-radius: 8px;">RK</div>
-              <div class="slack-msg-body">
-                <div class="slack-msg-header">
-                  <span class="slack-msg-name">Rachel Kim</span>
-                  <span class="slack-msg-badge" style="background:rgba(224,30,90,0.15); color:#E01E5A;">Head of Fulfilment</span>
-                  <span class="slack-msg-time">Wed 9:20 AM</span>
-                </div>
-                <div class="slack-msg-text">Confirmed for all three. One ask — can we add a live test during the Manhattan demo? I want to see how it handles our edge case: split shipments across 2 warehouses with partial inventory. That's where our current system falls apart.</div>
-                <span class="slack-reaction">&#128175; <span class="slack-reaction-count">3</span></span>
-              </div>
-            </div>
-
-            <!-- Buying Analysis Agent responds -->
-            <div class="slack-msg">
-              <div class="slack-avatar" style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 8px; font-size:9px; line-height:1.1; text-align:center; display:flex; align-items:center; justify-content:center;">&#129302;</div>
-              <div class="slack-msg-body">
-                <div class="slack-msg-header">
-                  <span class="slack-msg-name">Buying Analysis Agent</span>
-                  <span class="slack-msg-badge" style="background:rgba(16,185,129,0.15); color:#10B981;">AI AGENT</span>
-                  <span class="slack-msg-time">Wed 9:25 AM</span>
-                </div>
-                <div class="slack-msg-text">
-                  Added to all three demo agendas. I've also flagged this as a pass/fail criterion in the rubric — if a vendor can't handle split shipments across warehouses, they're disqualified. Updating the question packs now.
-                </div>
+                <span class="slack-reaction">&#128640; <span class="slack-reaction-count">3</span></span>
               </div>
             </div>
 
@@ -2069,7 +1954,6 @@
               <div class="slack-msg-body">
                 <div class="slack-msg-header">
                   <span class="slack-msg-name">James Torres</span>
-                  <span class="slack-msg-badge" style="background:rgba(54,197,240,0.15); color:#36C5F0;">VP Engineering</span>
                   <span class="slack-msg-time">Wed 2:30 PM</span>
                 </div>
                 <div class="slack-msg-text"><strong>Build Track update:</strong> Shared the Q4 architecture proposal with the Architecture Assessment Agent. Initial estimate: 4 engineers, 6-8 months for core OMS + API layer. Big question — do we build the warehouse integration or use a middleware?</div>
@@ -2096,25 +1980,15 @@
                   <strong>&#128202; Week 1 summary — both tracks on schedule</strong>
                 </div>
                 <div class="slack-artifact" style="border-left-color: #10B981;">
-                  <div class="slack-artifact-title" style="color: #10B981;">Buy Track: 3 artifacts produced, In-depth Evaluation starting</div>
-                  <div class="slack-artifact-desc">Buying Analysis Agent produced: Vendor Evaluation Matrix (v1.0, reviewed by VP Product), Demo Scoring Rubric, Vendor Question Packs. 3 vendors shortlisted. Customer-vendor calls booked. Integration Agent flagged: Manhattan has native ERP connector, Shipedge needs middleware.</div>
+                  <div class="slack-artifact-title" style="color: #10B981;">Buy Track: Vendor Evaluation Matrix complete, In-depth Evaluation starting</div>
+                  <div class="slack-artifact-desc">Buying Analysis Agent produced full matrix from public sources. 3 vendors shortlisted. Customer-vendor calls booked for In-depth Evaluation. Integration Agent flagged: Manhattan has native ERP connector, Brightpearl needs middleware.</div>
                 </div>
                 <div class="slack-artifact" style="border-left-color: #F59E0B;">
                   <div class="slack-artifact-title" style="color: #F59E0B;">Build Track: Architecture reviewed, effort model in progress</div>
                   <div class="slack-artifact-desc">Effort Estimation Agent projects 6-9 months. CTO recommends event-driven architecture. Opportunity cost analysis pending — VP Eng to confirm roadmap impact.</div>
                 </div>
-                <div style="margin-top:10px; padding:10px 12px; background:rgba(14,165,233,0.06); border-radius:8px; border:1px solid rgba(14,165,233,0.15);">
-                  <div style="font-size:11px; font-weight:700; color:var(--accent); letter-spacing:1px; margin-bottom:6px;">ARTIFACTS CREATED THIS WEEK</div>
-                  <div style="font-size:12px; color:var(--text-dim); line-height:1.8;">
-                    &#10003; Vendor Evaluation Matrix v1.0 <span style="opacity:0.5">— Buying Analysis Agent &middot; reviewed by Sarah Chen</span><br>
-                    &#10003; Vendor Demo Scoring Rubric <span style="opacity:0.5">— Buying Analysis Agent &middot; includes Rachel Kim's criteria</span><br>
-                    &#10003; Vendor Question Packs (3) <span style="opacity:0.5">— Buying Analysis Agent &middot; tailored per shortlisted vendor</span><br>
-                    &#10003; Architecture Assessment Report <span style="opacity:0.5">— Architecture Assessment Agent &middot; under CTO review</span><br>
-                    &#9675; Effort Estimation Model <span style="opacity:0.5">— Effort Estimation Agent &middot; in progress</span>
-                  </div>
-                </div>
-                <span class="slack-reaction">&#9989; <span class="slack-reaction-count">6</span></span>
-                <span class="slack-reaction">&#128588; <span class="slack-reaction-count">3</span></span>
+                <span class="slack-reaction">&#9989; <span class="slack-reaction-count">4</span></span>
+                <span class="slack-reaction">&#128588; <span class="slack-reaction-count">2</span></span>
               </div>
             </div>
 
@@ -2129,238 +2003,109 @@
         </div>
       </div>
 
-      <!-- RIGHT: Toggle between Decision Progress & Submitted Artifacts -->
+      <!-- RIGHT: Decision Path Live Progress -->
       <div>
-        <div class="rhs-toggle">
-          <button class="rhs-toggle-btn active" onclick="toggleRHS('progress')">Decision Progress</button>
-          <button class="rhs-toggle-btn" onclick="toggleRHS('artifacts')">Submitted Artifacts</button>
-        </div>
-
-        <!-- Panel 1: Decision Progress -->
-        <div class="rhs-panel active" id="rhs-progress">
-          <div class="dp-live">
-            <!-- Phase 0: Done -->
-            <div class="dp-live-phase phase-done">
-              <div class="dp-live-header">
-                <div class="dp-live-badge phase-bg-teal">0</div>
-                <div class="dp-live-title">Scope & Align</div>
-                <span class="dp-live-status status-done">Completed</span>
-              </div>
-              <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:100%; background: var(--green);"></div></div>
-              <div class="dp-live-tasks">
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Confirm problem statement &amp; merge duplicate</div>
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Define evaluation criteria (weighted)</div>
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Confirm $750K budget &amp; 4-week timeline</div>
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Assign track leads &amp; launch parallel tracks</div>
-              </div>
-              <div class="dp-live-timeline">
-                <span class="dp-live-timeline-dot" style="background: var(--green);"></span>
-                Completed in 3 days &middot; 2 hrs stakeholder time
-              </div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; margin-bottom:12px;">Decision Progress</div>
+        <div class="dp-live">
+          <!-- Phase 0: Done -->
+          <div class="dp-live-phase phase-done">
+            <div class="dp-live-header">
+              <div class="dp-live-badge phase-bg-teal">0</div>
+              <div class="dp-live-title">Scope & Align</div>
+              <span class="dp-live-status status-done">Completed</span>
             </div>
-
-            <!-- Phase 1A: Buy Track — Active -->
-            <div class="dp-live-phase phase-active">
-              <div class="dp-live-header">
-                <div class="dp-live-badge phase-bg-green">1A</div>
-                <div class="dp-live-title">Buy Track — Vendor Eval</div>
-                <span class="dp-live-status status-active">In Progress — Day 5 of 14</span>
-              </div>
-              <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:45%; background: var(--green);"></div></div>
-              <div class="dp-live-tasks">
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Vendor Evaluation Matrix v1.0 (reviewed by VP Product)</div>
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Demo Scoring Rubric created (incl. fulfilment criteria)</div>
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Vendor Question Packs prepared (3 vendors)</div>
-                <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>In-depth Evaluation — vendor demos next week</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO model (Buy scenario)</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Reference checks &amp; commercial terms</div>
-              </div>
-              <div class="dp-live-timeline">
-                <span class="dp-live-timeline-dot" style="background: var(--green);"></span>
-                Lead: VP Product &middot; 3 artifacts produced &middot; Buying Analysis Agent active
-              </div>
+            <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:100%; background: var(--green);"></div></div>
+            <div class="dp-live-tasks">
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Confirm problem statement &amp; merge duplicate</div>
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Define evaluation criteria (weighted)</div>
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Confirm $750K budget &amp; 4-week timeline</div>
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Assign track leads &amp; launch parallel tracks</div>
             </div>
-
-            <!-- Phase 1B: Build Track — Active -->
-            <div class="dp-live-phase phase-active">
-              <div class="dp-live-header">
-                <div class="dp-live-badge phase-bg-orange">1B</div>
-                <div class="dp-live-title">Build Track — In-House Eval</div>
-                <span class="dp-live-status status-active">In Progress — Day 5 of 14</span>
-              </div>
-              <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:40%; background: var(--orange);"></div></div>
-              <div class="dp-live-tasks">
-                <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Architecture Assessment Agent reviewed proposal</div>
-                <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>Effort estimation in progress (6-9 months est.)</div>
-                <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>CTO reviewing event-driven architecture</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Opportunity cost analysis — awaiting VP Eng</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO model (Build scenario)</div>
-              </div>
-              <div class="dp-live-timeline">
-                <span class="dp-live-timeline-dot" style="background: var(--orange);"></span>
-                Lead: VP Engineering &middot; 1 of 5 steps done &middot; 2 AI agents active
-              </div>
-            </div>
-
-            <!-- Phase 2: Upcoming -->
-            <div class="dp-live-phase phase-upcoming">
-              <div class="dp-live-header">
-                <div class="dp-live-badge phase-bg-purple">2</div>
-                <div class="dp-live-title">Compare & Converge</div>
-                <span class="dp-live-status status-upcoming">Starts Week 3</span>
-              </div>
-              <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:0%; background: var(--purple);"></div></div>
-              <div class="dp-live-tasks">
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Side-by-side comparison matrix</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO reconciliation (3-year, both paths)</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Risk comparison &amp; scenario planning</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Stakeholder scoring &amp; preference vote</div>
-              </div>
-              <div class="dp-live-timeline">
-                <span class="dp-live-timeline-dot" style="background: rgba(148,163,184,0.3);"></span>
-                Scheduled: Week 3 &middot; 3 hrs stakeholder time &middot; 3 AI agents
-              </div>
-            </div>
-
-            <!-- Phase 3: Upcoming -->
-            <div class="dp-live-phase phase-upcoming">
-              <div class="dp-live-header">
-                <div class="dp-live-badge" style="background: linear-gradient(135deg, #EF4444, #DC2626);">3</div>
-                <div class="dp-live-title">Decision & Launch</div>
-                <span class="dp-live-status status-upcoming">Starts Week 4</span>
-              </div>
-              <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:0%; background: #EF4444;"></div></div>
-              <div class="dp-live-tasks">
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Distribute recommendation brief</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Decision meeting — Buy, Build, or Hybrid?</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Document decision &amp; rationale</div>
-                <div class="dp-live-task"><span class="dp-live-check pending"></span>Trigger implementation workstream</div>
-              </div>
-              <div class="dp-live-timeline">
-                <span class="dp-live-timeline-dot" style="background: rgba(148,163,184,0.3);"></span>
-                Scheduled: Week 4 &middot; 1.5 hr decision meeting &middot; COO + CFO + CEO
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Panel 2: Submitted Artifacts -->
-        <div class="rhs-panel" id="rhs-artifacts">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
-            <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--text-muted); text-transform:uppercase;">6 artifacts &middot; 4 completed &middot; 2 in progress</div>
-          </div>
-
-          <!-- Artifact 1 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(16,185,129,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Vendor Evaluation Matrix v1.0</div>
-                <div class="artifact-file-meta">Created by Buying Analysis Agent &middot; Tue, Day 2 &middot; Reviewed by Sarah Chen</div>
-              </div>
-            </div>
-            <div class="artifact-file-desc">12 vendors scored across 9 weighted criteria. 3 shortlisted: Manhattan Active, Linnworks, Shipedge. Incorporates VP Product feedback on warehouse sync weighting (25%) and multi-currency support.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-buy">Buy Track</span>
-              <span class="artifact-file-tag">Phase 1A</span>
-              <span class="artifact-file-tag" style="background:rgba(16,185,129,0.1); color:#10B981;">&#10003; Final</span>
+            <div class="dp-live-timeline">
+              <span class="dp-live-timeline-dot" style="background: var(--green);"></span>
+              Completed in 3 days &middot; 2 hrs stakeholder time
             </div>
           </div>
 
-          <!-- Artifact 2 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(14,165,233,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Vendor Demo Scoring Rubric</div>
-                <div class="artifact-file-meta">Created by Buying Analysis Agent &middot; Wed, Day 3 &middot; Input from Rachel Kim</div>
-              </div>
+          <!-- Phase 1A: Buy Track — Active -->
+          <div class="dp-live-phase phase-active">
+            <div class="dp-live-header">
+              <div class="dp-live-badge phase-bg-green">1A</div>
+              <div class="dp-live-title">Buy Track — Vendor Eval</div>
+              <span class="dp-live-status status-active">In Progress — Day 5 of 14</span>
             </div>
-            <div class="artifact-file-desc">Standardised rubric with 15 scored items across UX, integration, performance, and support. Includes pass/fail criterion for split-shipment handling per Head of Fulfilment's requirement.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-buy">Buy Track</span>
-              <span class="artifact-file-tag">Phase 1A</span>
-              <span class="artifact-file-tag" style="background:rgba(16,185,129,0.1); color:#10B981;">&#10003; Final</span>
+            <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:45%; background: var(--green);"></div></div>
+            <div class="dp-live-tasks">
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Vendor Evaluation Matrix complete (12 → 3 shortlisted)</div>
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Integration Assessment Agent deployed</div>
+              <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>In-depth Evaluation — customer-vendor calls next week</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO model (Buy scenario)</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Reference checks &amp; commercial terms</div>
             </div>
-          </div>
-
-          <!-- Artifact 3 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(16,185,129,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Vendor Question Packs (3)</div>
-                <div class="artifact-file-meta">Created by Buying Analysis Agent &middot; Wed, Day 3</div>
-              </div>
-            </div>
-            <div class="artifact-file-desc">Tailored question sets for each shortlisted vendor. Manhattan: ERP connector depth, real-time sync. Linnworks: multi-currency handling, API limits. Shipedge: warehouse sync architecture, split shipment support.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-buy">Buy Track</span>
-              <span class="artifact-file-tag">Phase 1A</span>
-              <span class="artifact-file-tag" style="background:rgba(16,185,129,0.1); color:#10B981;">&#10003; Final</span>
+            <div class="dp-live-timeline">
+              <span class="dp-live-timeline-dot" style="background: var(--green);"></span>
+              Lead: VP Product &middot; 2 of 5 done &middot; Buying Analysis Agent active
             </div>
           </div>
 
-          <!-- Artifact 4 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(245,158,11,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 6 14 10 18 10.5 15 13.5 16 18 12 15.5 8 18 9 13.5 6 10.5 10 10"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Architecture Assessment Report</div>
-                <div class="artifact-file-meta">Created by Architecture Assessment Agent &middot; Wed, Day 3 &middot; Under CTO review</div>
-              </div>
+          <!-- Phase 1B: Build Track — Active -->
+          <div class="dp-live-phase phase-active">
+            <div class="dp-live-header">
+              <div class="dp-live-badge phase-bg-orange">1B</div>
+              <div class="dp-live-title">Build Track — In-House Eval</div>
+              <span class="dp-live-status status-active">In Progress — Day 5 of 14</span>
             </div>
-            <div class="artifact-file-desc">Review of Q4 rebuild proposal. Recommends event-driven architecture with microservices. Identifies 3 critical integration points. Flags warehouse sync as highest-risk custom component. CTO review pending.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-build">Build Track</span>
-              <span class="artifact-file-tag">Phase 1B</span>
-              <span class="artifact-file-tag" style="background:rgba(16,185,129,0.1); color:#10B981;">&#10003; Final</span>
+            <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:40%; background: var(--orange);"></div></div>
+            <div class="dp-live-tasks">
+              <div class="dp-live-task task-done"><span class="dp-live-check done">&#10003;</span>Architecture Assessment Agent reviewed proposal</div>
+              <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>Effort estimation in progress (6-9 months est.)</div>
+              <div class="dp-live-task task-active"><span class="dp-live-check active">&#9679;</span>CTO reviewing event-driven architecture</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Opportunity cost analysis — awaiting VP Eng</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO model (Build scenario)</div>
             </div>
-          </div>
-
-          <!-- Artifact 5 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(245,158,11,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Effort &amp; Cost Estimation Model</div>
-                <div class="artifact-file-meta">Created by Effort Estimation Agent &middot; Thu, Day 4 &middot; In progress</div>
-              </div>
-            </div>
-            <div class="artifact-file-desc">Preliminary model: 4 engineers, 6-9 months, core OMS + API layer. Includes capacity analysis, sprint breakdown, and risk-adjusted timeline. Awaiting VP Engineering confirmation on roadmap impact.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-build">Build Track</span>
-              <span class="artifact-file-tag">Phase 1B</span>
-              <span class="artifact-file-tag" style="background:rgba(14,165,233,0.1); color:#0EA5E9;">&#9679; In Progress</span>
+            <div class="dp-live-timeline">
+              <span class="dp-live-timeline-dot" style="background: var(--orange);"></span>
+              Lead: VP Engineering &middot; 1 of 5 steps done &middot; 2 AI agents active
             </div>
           </div>
 
-          <!-- Artifact 6 -->
-          <div class="artifact-file">
-            <div class="artifact-file-header">
-              <div class="artifact-file-icon" style="background:rgba(139,92,246,0.1);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/></svg>
-              </div>
-              <div>
-                <div class="artifact-file-name">Scope &amp; Evaluation Criteria Brief</div>
-                <div class="artifact-file-meta">Created by Clarioo &middot; Mon, Day 1 &middot; Approved by all stakeholders</div>
-              </div>
+          <!-- Phase 2: Upcoming -->
+          <div class="dp-live-phase phase-upcoming">
+            <div class="dp-live-header">
+              <div class="dp-live-badge phase-bg-purple">2</div>
+              <div class="dp-live-title">Compare & Converge</div>
+              <span class="dp-live-status status-upcoming">Starts Week 3</span>
             </div>
-            <div class="artifact-file-desc">Defines the decision scope, problem statement, merged duplicate requests, weighted evaluation criteria, budget ($750K), timeline (4 weeks), and assigned track leads. Foundation document for both tracks.</div>
-            <div class="artifact-file-tags">
-              <span class="artifact-file-tag tag-both">Both Tracks</span>
-              <span class="artifact-file-tag">Phase 0</span>
-              <span class="artifact-file-tag" style="background:rgba(16,185,129,0.1); color:#10B981;">&#10003; Final</span>
+            <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:0%; background: var(--purple);"></div></div>
+            <div class="dp-live-tasks">
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Side-by-side comparison matrix</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>TCO reconciliation (3-year, both paths)</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Risk comparison &amp; scenario planning</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Stakeholder scoring &amp; preference vote</div>
+            </div>
+            <div class="dp-live-timeline">
+              <span class="dp-live-timeline-dot" style="background: rgba(148,163,184,0.3);"></span>
+              Scheduled: Week 3 &middot; 3 hrs stakeholder time &middot; 3 AI agents
+            </div>
+          </div>
+
+          <!-- Phase 3: Upcoming -->
+          <div class="dp-live-phase phase-upcoming">
+            <div class="dp-live-header">
+              <div class="dp-live-badge" style="background: linear-gradient(135deg, #EF4444, #DC2626);">3</div>
+              <div class="dp-live-title">Decision & Launch</div>
+              <span class="dp-live-status status-upcoming">Starts Week 4</span>
+            </div>
+            <div class="dp-live-progress"><div class="dp-live-progress-bar" style="width:0%; background: #EF4444;"></div></div>
+            <div class="dp-live-tasks">
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Distribute recommendation brief</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Decision meeting — Buy, Build, or Hybrid?</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Document decision &amp; rationale</div>
+              <div class="dp-live-task"><span class="dp-live-check pending"></span>Trigger implementation workstream</div>
+            </div>
+            <div class="dp-live-timeline">
+              <span class="dp-live-timeline-dot" style="background: rgba(148,163,184,0.3);"></span>
+              Scheduled: Week 4 &middot; 1.5 hr decision meeting &middot; COO + CFO + CEO
             </div>
           </div>
         </div>
@@ -2809,13 +2554,6 @@ buildMatrix();
 renderClusters('process', null);
 
 // ===== NAVIGATION =====
-function toggleRHS(panel) {
-  document.querySelectorAll('.rhs-toggle-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll('.rhs-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('rhs-' + panel).classList.add('active');
-  event.target.classList.add('active');
-}
-
 function showSection(idx) {
   document.querySelectorAll('.section').forEach((s, i) => s.classList.toggle('active', i === idx));
   document.querySelectorAll('.nav-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
